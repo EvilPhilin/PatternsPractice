@@ -5,7 +5,7 @@
 class OrcFactory : public EnemyFactory
 {
 public:
-	Orc* createEnemy() override;
+	IEnemy* createEnemy() override;
 	OrcFactory();
 	~OrcFactory();
 

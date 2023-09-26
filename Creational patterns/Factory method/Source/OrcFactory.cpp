@@ -1,7 +1,7 @@
 #include "../Headers/OrcFactory.h"
 #include <iostream>
 
-Orc* OrcFactory::createEnemy()
+IEnemy* OrcFactory::createEnemy()
 {
 	return new Orc();
 }

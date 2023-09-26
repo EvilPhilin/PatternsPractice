@@ -1,7 +1,7 @@
 #include "../Headers/SkeletonFactory.h"
 #include <iostream>
 
-Skeleton* SkeletonFactory::createEnemy()
+IEnemy* SkeletonFactory::createEnemy()
 {
 	return new Skeleton();
 }

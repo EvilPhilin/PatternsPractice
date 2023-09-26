@@ -1,18 +1,26 @@
-#include "Headers/Skeleton.h"
+#include "Headers/IEnemy.h"
 #include "Headers/SkeletonFactory.h"
-#include "Headers/Orc.h"
 #include "Headers/OrcFactory.h"
+#include "Headers/EnemyFactory.h"
+
+/*
+* Client code can create and use Enemies 
+* without knowing anything about their implementations
+*/
+void useFactory(EnemyFactory& ef)
+{
+	IEnemy* e = ef.createEnemy();
+	e->beAngry();
+	delete e;
+}
 
 void doTest()
 {
-	SkeletonFactory sf;
-	Skeleton* s = sf.createEnemy();
-	s->beAngry();
+	OrcFactory* of = new OrcFactory();
+	useFactory(*of);
+	delete of;
 
-	OrcFactory of;
-	Orc* o = of.createEnemy();
-	o->beAngry();
-
-	delete s;
-	delete o;
+	SkeletonFactory* sf = new SkeletonFactory();
+	useFactory(*sf);
+	delete sf;
 }

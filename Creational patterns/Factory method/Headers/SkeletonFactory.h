@@ -5,7 +5,7 @@
 class SkeletonFactory : public EnemyFactory
 {
 public:
-	Skeleton* createEnemy() override;
+	IEnemy* createEnemy() override;
 	SkeletonFactory();
 	~SkeletonFactory();
 
