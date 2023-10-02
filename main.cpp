@@ -1,4 +1,4 @@
-#include "Structural patterns/Decorator Wrapper/Test.cpp"
+#include "Behavioral patterns/Iterator/Test.cpp"
 
 int main()
 {
